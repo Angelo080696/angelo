@@ -8,11 +8,41 @@
 </head>
 <body>
    <h1 id="titre1"> Mon titre </h1> 
+   <p> <a href="" id="switch-titre"> Change titre </a></p>
    <p>Paragraphe</p>
-   <script defer> 
-const $myTitre1 = document.querySelector('titre1')
-const $titre1b = document.getElementById ('tite1')
-$myTitre1.innerText= "New texte"
+
+   <hr>
+<form action="">
+    <label for="nb1">Nombre 1</label>
+    <input type="number" id="nb1" value="0">
+    <label for="nb2">Nombre 2</label>
+    <input type="number" id="nb2" value="0">
+    <button>Calculer</button>
+</form>
+<script>
+   var nb1 ="0";
+
+   console.log(nb1.value);
 </script>
 </body>
 </html>
+
+<!--
+
+ function
+   <script defer> 
+    const $myTitre1 = document.querySelector('#titre1')
+    const $titre1b = document.getElementById ('tite1')
+    const $switchTitre = document.querySelector('#switch-titre')
+    //console.log($myTitre1)
+    /*sdfsdfsfsd
+    */
+    $switchTitre.addEventListener('click', event => 
+    {
+        
+        event.preventDefault()
+        console.log(event)
+        $myTitre1.innerText= "New texte"
+    })    
+
+-->
