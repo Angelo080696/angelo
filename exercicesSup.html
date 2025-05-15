@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        .hidden {
+            opacity: 0;
+        }
+
+        .form-hidden {
+            display: none;
+        }
+
+        .notification {
+            transition: all 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content container">
+        <form class="form loginForm">
+            <h1 class="title">Connexion</h1>
+            <div class="notification is-danger hidden">
+                <!--<button class="delete"></button>-->
+                Erreur de login / password.
+            </div>
+            <div class="field">
+                <label class="label">Login</label>
+                <div class="control">
+                    <input class="input login" type="text">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                    <input class="input password" type="password">
+                </div>
+            </div>
+            <div class="control">
+                <button class="button is-link">Se connecter</button>
+            </div>
+        </form>
+        <div class="secure hidden">
+            <h1>Vous êtes connecté</h1>
+            <p>Texte sécurisé</p>
+        </div>
+    </div>
+    <script defer>
+
+        const USERNAME_DB = "angelo"
+        const PASSWORD_DB = "angel"
+        //je récupère le form (un objet) de l'html, dans mon javascript
+        const $form = document.querySelector(".loginForm")
+        //pareil ici
+        const $secureDiv = document.querySelector(".secure")
+        //On vérifie que ça fonctionne bien avant de cliquer sur le bouton (pour voir si le lien de ta src est bon)
+        console.log("avant le clic du bouton");
+        //On ajoute un évenènement 'submit' (propre à la balise form, 'click' pour les boutons) submit = envoi d'informations
+        $form.addEventListener("submit", event => {
+            event.preventDefault();//permet de ne pas reload la page et de garder les informations
+            console.log("après le clic du bouton");
+            //on va chercher la valeur de notre input ".login"
+            const $username = document.querySelector(".login").value;
+            //on va chercher la valeur de notre input ".password"
+            const $password = document.querySelector(".password").value;
+            //on affiche pour etre sur de ce qu'on a
+            console.log($username);
+            console.log($password);
+            // Vérification simple entre l'username de la base de données (USERNAME_DB) et 
+            // la valeur que l'utilisateur a rentré ($username)
+            // Même chose pour le mot de passe 
+            if (USERNAME_DB == $username && PASSWORD_DB == $password) {
+                //vu qu'on est connecté, on va rendre le formulaire invisible grace à la classe hidden. 
+                $form.classList.add('hidden')
+                //Et on veut afficher la classe ".Secure" en enlevant la classe ".hidden"
+                $secureDiv.classList.remove('hidden')
+                console.log("dans le if");
+            } else {//else est tout le temps la dernière option possible
+                //Permet de reset le formulaire quand l'utilisateur entre un mauvais username/mdp
+                $form.reset();
+                console.log("dans le else");
+
+            }
+        })
+
+    </script>
+</body>
+
+</html>
