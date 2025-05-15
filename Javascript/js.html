@@ -5,14 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-1</title>
-    <script> 
-    let lastName='Smit'
-    let firstame='Pierre'
-    let fullName=lastName+firstName
-    console.log(lastName+firstName)
-    </script>
+    
 </head>
 <body>
     <h1>JS-1</h1>
+    <div id="sortie">
+        <ul id='Hobbies'></ul>
+    </div>
+
+    <script> 
+        document.addEventListener('DOMContentLoaded', function(){
+            const calculAge = (birthYear)=> {
+                return 2025 - birthYear
+            }        
+        let lastName='Smit'
+        let firstName='Pierre'
+        let fullName=lastName+firstName
+        let birthYear= 1996
+        let inscription = true//false
+        
+        let conjoint= {
+            firstName: "Martine", 
+            lastname: "VG", 
+            birthYear : 56, 
+            inscription: false, 
+            hobbies: ['serie tv', 'gym'], 
+            address : { 
+                street: "Rue machin 9", 
+                zip: 6024, 
+                city:"Gosselies"
+            }
+        }
+        lastName = 'Charlier'
+        let hobbies = new Array ('tennis', 'cinema')
+    
+
+        let template=`
+        <div>
+            <p>Je m'appele ${firstName} ${lastName} </p>
+            <p> J'ai ${calculAge(birthYear)} ans </p>
+            <p> Mes hobbies : ${hobbies.join(' / ')} </p>
+            <p> Mon conjoint s'appelle ${conjoint.firstName} ${conjoint.lastname} </p>
+            </div>
+            `
+        console.log(`
+        <div>
+            <p>Je m'appele ${firstName} ${lastName} </p>
+            <p> J'ai ${2025-birthYear} ans </p>
+            <p> Mes hobbies : ${hobbies[1]} </p>
+            <p> Mon conjoint s'appelle ${conjoint.firstName} ${conjoint.lastname} </p>
+            </div>
+            `)
+    let $sortie = document.querySelector('#sortie')
+    $sortie.innerHTML = template
+    console.log($sortie)
+    $sortie.insertAdjacentHTML('afterbegin', template)
+    const $ulHobbies = $sortie.querySelector('ul')
+    console.log($ulHobbies)
+    hobbies.forEach(hobby => {
+        $ulHobbies.insertAdjacentHTML('beforeend',`<li>${hobby}</li>`)
+    })
+        })
+          </script>
 </body>
 </html>
