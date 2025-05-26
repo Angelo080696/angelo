@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV Design</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f9;
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      background-color: #2c3e50;
+      color: white;
+      padding: 30px;
+    }
+
+    .sidebar h2 {
+      color: #e67e22;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar p, .sidebar li {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .main {
+      padding: 30px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      color: #e67e22;
+      border-bottom: 2px solid #e67e22;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .section p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .placeholder {
+      color: #7f8c8d;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="sidebar">
+    <h2>Nom Prénom</h2>
+    <p class="placeholder">Titre professionnel</p>
+    <hr style="border: none; border-top: 1px solid #e67e22; margin: 20px 0;">
+    <h3>Contact</h3>
+    <ul>
+      <li class="placeholder">Email</li>
+      <li class="placeholder">Téléphone</li>
+      <li class="placeholder">Adresse</li>
+    </ul>
+    <h3>Compétences</h3>
+    <ul>
+      <li class="placeholder">Compétence 1</li>
+      <li class="placeholder">Compétence 2</li>
+      <li class="placeholder">Compétence 3</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="section">
+      <h2>Profil</h2>
+      <p class="placeholder">Brève description de votre parcours, personnalité et objectifs professionnels.</p>
+    </div>
+
+    <div class="section">
+      <h2>Expérience</h2>
+      <p class="placeholder">Nom de l'entreprise - Poste occupé - Dates</p>
+      <p class="placeholder">Résumé des missions et réalisations.</p>
+    </div>
+
+    <div class="section">
+      <h2>Formation</h2>
+      <p class="placeholder">Nom de l'établissement - Diplôme - Dates</p>
+    </div>
+
+    <div class="section">
+      <h2>Langues</h2>
+      <p class="placeholder">Langue 1 – Niveau</p>
+      <p class="placeholder">Langue 2 – Niveau</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
