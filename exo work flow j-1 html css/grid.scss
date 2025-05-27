@@ -1,0 +1,26 @@
+body{
+    display: grid; // cette propriete transforme un element html en conteneur de grille CSS
+    grid-template-columns: 1fr 1fr 1fr;// une fraction 
+    grid-template-rows: 1fr 1fr 1fr; // taille des ligne dans une grille 
+    gap:.5rem;// espace entre les elements
+    * {
+    border:1px solid black; // bordure 
+      
+    }
+    
+  }
+  .toto{
+  
+    grid-column: 1/-1; // sert à positioner et etendre un element dans une grille css
+    
+  }
+  .tutu{
+    
+  }
+  .titi{
+    grid-column: span 2; // permet de s'etendre sur un certain nombre de lignes ou de colonnes
+  }
+  .tata{
+    grid-column: 1/-1; // permet de s'etendre sur un certain nombre de lignes ou de colonnes
+    
+  }
