@@ -1,4 +1,4 @@
-body{
+body{ // selection de la balise , ne pas mettre de (.) avant
     display: grid; // cette propriete transforme un element html en conteneur de grille CSS
     grid-template-columns: 1fr 1fr 1fr;// une fraction 
     grid-template-rows: 1fr 1fr 1fr; // taille des ligne dans une grille 
@@ -9,7 +9,7 @@ body{
     }
     
   }
-  .toto{
+  .toto{ // selection d'une classe , mettre un (.) avant 
   
     grid-column: 1/-1; // sert à positioner et etendre un element dans une grille css
     
