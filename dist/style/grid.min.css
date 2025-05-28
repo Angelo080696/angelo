@@ -1,0 +1,1 @@
+body{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:.5rem}body *{border:1px solid #000}.toto{grid-column:1/-1}.titi{grid-column:span 2}.tata{grid-column:1/-1}/*# sourceMappingURL=grid.min.css.map */
