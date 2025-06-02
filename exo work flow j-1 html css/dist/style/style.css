@@ -1,32 +1,31 @@
-body {
-  background: rgb(248, 113, 113);
+.month {
+  border: 2px solid #888;
 }
-
-.mainHeader__nav ul {
-  display: flex;
-  transition: all 0.4s;
-  gap: 1rem;
-  position: fixed;
-  inset: 0;
-  inset-inline: 100vw -100vw;
-  margin: 0;
+.month .week {
+  border: 2px solid blue;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
 }
-.mainHeader__nav ul li {
-  display: flex;
-  list-style: none;
+.month .week .day {
+  border: 2px solid pink;
+  width: 50px;
+  height: 50px;
+}
+.month .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  border: 2px solid red;
   padding: 1rem;
-  border: 1px solid black;
 }
-.mainHeader__nav ul li ::first-letter {
-  text-transform: capitalize;
-}
-@media screen and (max-width: 40rem) {
-  .mainHeader__nav ul {
-    padding: 0;
-    background: red;
-    border: 1px solid black;
-    flex-direction: column;
-    text-align: end;
+.month .days .item {
+  border: 2px dotted red;
+  padding: 1rem;
+}/*# sourceMappingURL=style.css.map */-align: end;
   }
 }
 

@@ -1,0 +1,27 @@
+$color-sun: #FC0 ;
+$color-sun-bis: darken($color-sun, 10%);
+$color-water: #0CF;
+$color-water-bis: darken($color-water, 10%),
+$color-tree: #0C0;
+$color-tree-bis: darken($color-tree, 10%),
+
+.parent{
+  
+}
+:root{
+    --sun-color: #
+    --sun-color-bis: #
+    --water-color: #
+    --water-color-bis: #
+    --tree-color: #
+    --tree-color-bis: #
+    --color: #
+    --color-bis: #
+    --p-size: #
+
+}
+  
+}
+item{
+  
+}
