@@ -1,0 +1,17 @@
+:root {
+  --sun-color: #($color-sun);
+  --sun-color-bis: #($color-sun-bis);
+  --water-color: #($water-color);
+  --water-color-bis: #($color-water-bis);
+  --tree-color: #($color-tree);
+  --tree-color-bis: #($color-tree-bis);
+  --color: #ccc;
+  --color-bis: #999;
+  --p-size: #1rem;
+}
+
+.item {
+  background: var(--color);
+  margin: calc(var(--p-size))/2;
+  padding: var(--p-size);
+}/*# sourceMappingURL=menuderoullant.css.map */

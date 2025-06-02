@@ -1,0 +1,41 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --sun-color: #($color-sun);
+  --sun-color-bis: #($color-sun-bis);
+  --water-color: #($water-color);
+  --water-color-bis: #($color-water-bis);
+  --tree-color: #($color-tree);
+  --tree-color-bis: #($color-tree-bis);
+  --color: #ccc;
+  --color-bis: #999;
+  --p-size: #1rem;
+}
+
+.parent {
+  display: grid;
+}
+.parent .item {
+  margin: calc(var(--p-size))/2;
+  padding: var(--p-size);
+  background-color: gray;
+  padding: 1rem;
+}
+.parent .sun {
+  background-color: red;
+  padding: 1rem;
+}
+.parent .water {
+  background-color: blue;
+  padding: 1rem;
+}
+.parent .tree {
+  background-color: green;
+  padding: 1rem;
+}
+.parent .other {
+  background-color: gray;
+  padding: 1rem;
+}/*# sourceMappingURL=menuderoullant.css.map */
