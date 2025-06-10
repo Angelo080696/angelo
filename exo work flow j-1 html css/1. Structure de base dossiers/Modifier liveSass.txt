@@ -1,0 +1,16 @@
+dans les settings de vscode
+
+"liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/../../dist/style/",
+            "savePathReplacementPairs": null
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "~/../../dist/style/",
+            "savePathReplacementPairs": null
+        }
+    ]
