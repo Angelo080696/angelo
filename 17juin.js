@@ -62,8 +62,8 @@ const actualize = (data) => {
       <p class="text-sm text-gray-500">${data.email}</p>
     </div>
     <div class="space-x-2">
-      <button class="text-sm bg-yellow-400 px-3 py-1 rounded hover:bg-yellow-500">Éditer</button>
-      <button class="text-sm bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Supprimer</button>
+      <button class="text-sm bg-yellow-400 px-3 py-1 rounded hover:bg-yellow-500 data-action='edit">Éditer</button>
+      <button class="text-sm bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 data-action='delete">Supprimer</button>
     </div>
   </li>
 
@@ -95,5 +95,9 @@ const init = async () => {
         console.log(err)
     }
 }
+
+$usersList.addEventListener('click',e => {}
+    e.preventDefault())
+    if(e.target.dataset.action == 'delete')
 
 init()
