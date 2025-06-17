@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf8"?>
+<!DOCTYPE library[
+    <!ELEMENT library (name, address, books)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT address (street, zipcode, city)>
+    <!ELEMENT street (#PCDATA)>
+    <!ELEMENT zipcode (#PCDATA)>
+    <!ELEMENT city (#PCDATA)>
+    <!ELEMENT books (item+)>
+    <!ELEMENT item (title, pages?, authors, resume)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT pages (#PCDATA)>
+    <!ELEMENT authors (item-author+)>
+    <!ELEMENT item-author (firstname, lastname)>
+    <!ELEMENT firstname (#PCDATA)>
+    <!ELEMENT lastname (#PCDATA)>
+    <!ELEMENT resume (#PCDATA)>
+    <!ATTLIST item 
+        isbn ID #REQUIRED
+        out CDATA #IMPLIED
+    >
+    <!ENTITY cepegra "Forem Formation Cepegra">
+]>
+<library>
+    <name>Librairie du Cepegra</name>
+    <address>
+        <street>&cepegra; Av. G. Lemaitre 22</street>
+        <zipcode>6041</zipcode>
+        <city>Gosselies</city>
+        
+    </address>
+    <books>
+        <item isbn="A568956" out="true">
+            <title>XML pour les nulls &amp; moins nulls</title>
+            <pages>98</pages>
+            <authors>
+                <item-author>
+                    <firstname>Pierre</firstname>
+                    <lastname>Charlier</lastname>
+                </item-author>
+            </authors>
+            <resume>
+                <![CDATA[texte qui <strong>ne sera pas parsé</strong> par le lecteur du fichier XML]]>
+            </resume>
+        </item>
+        <item isbn="A568957" out="false">
+            <title>PHP &gt; 8.0</title>
+            <authors>
+                <item-author>
+                    <firstname>Henry</firstname>
+                    <lastname>Pfr</lastname>
+                </item-author>
+            </authors>
+            <resume>
+                <![CDATA[texte qui <strong>ne sera pas parsé</strong> par le lecteur du fichier XML]]>
+            </resume>
+        </item>
+    </books>
+</library>
